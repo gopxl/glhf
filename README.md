@@ -1,9 +1,9 @@
-# glhf [![GoDoc](https://godoc.org/github.com/faiface/glhf?status.svg)](http://godoc.org/github.com/faiface/glhf) [![Report card](https://goreportcard.com/badge/github.com/faiface/glhf)](https://goreportcard.com/report/github.com/faiface/glhf)
+# glhf [![GoDoc](https://godoc.org/github.com/gopxl/glfh?status.svg)](http://godoc.org/github.com/gopxl/glfh) [![Report card](https://goreportcard.com/badge/github.com/gopxl/glfh)](https://goreportcard.com/report/github.com/gopxl/glfh)
 
 open**GL** **H**ave **F**un - A Go package that makes life with OpenGL enjoyable.
 
 ```
-go get github.com/faiface/glhf
+go get github.com/gopxl/glfh
 ```
 
 ## Main features
@@ -27,7 +27,7 @@ request_.
 
 ## Code
 
-The following are parts of the demo program, which can be found in the [examples](https://github.com/faiface/glhf/tree/master/examples/demo).
+The following are parts of the demo program, which can be found in the [examples](https://github.com/gopxl/glfh/tree/master/examples/demo).
 
 ```go
 // ... GLFW window creation and stuff ...
@@ -166,7 +166,7 @@ for !shouldQuit {
 It uses OpenGL 3.3 and uses
 [`github.com/go-gl/gl/v3.3-core/gl`](https://github.com/go-gl/gl/tree/master/v3.3-core/gl).
 
-### Why do I have to use `github.com/faiface/mainthread` package with GLHF?
+### Why do I have to use `github.com/gopxl/mainthread` package with GLHF?
 
 First of all, OpenGL has to be done from one thread and many operating systems require, that the one
 thread will be the main thread of your application.
