@@ -6,8 +6,8 @@ import (
 	_ "image/png"
 	"os"
 
-	"github.com/faiface/glhf"
-	"github.com/faiface/mainthread"
+	"github.com/gopxl/glfh"
+	"github.com/gopxl/mainthread"
 	"github.com/go-gl/glfw/v3.1/glfw"
 )
 
