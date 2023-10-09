@@ -6,9 +6,9 @@ import (
 	_ "image/png"
 	"os"
 
-	"github.com/gopxl/glfh"
-	"github.com/gopxl/mainthread"
 	"github.com/go-gl/glfw/v3.1/glfw"
+	"github.com/gopxl/glhf"
+	"github.com/gopxl/mainthread"
 )
 
 func loadImage(path string) (*image.NRGBA, error) {

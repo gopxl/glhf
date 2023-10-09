@@ -1,9 +1,9 @@
-# glhf [![GoDoc](https://godoc.org/github.com/gopxl/glfh?status.svg)](http://godoc.org/github.com/gopxl/glfh) [![Report card](https://goreportcard.com/badge/github.com/gopxl/glfh)](https://goreportcard.com/report/github.com/gopxl/glfh)
+# glhf [![GoDoc](https://godoc.org/github.com/gopxl/glhf?status.svg)](http://godoc.org/github.com/gopxl/glhf) [![Report card](https://goreportcard.com/badge/github.com/gopxl/glhf)](https://goreportcard.com/report/github.com/gopxl/glhf)
 
 open**GL** **H**ave **F**un - A Go package that makes life with OpenGL enjoyable.
 
 ```
-go get github.com/gopxl/glfh
+go get github.com/gopxl/glhf
 ```
 
 ## Main features
@@ -27,7 +27,7 @@ request_.
 
 ## Code
 
-The following are parts of the demo program, which can be found in the [examples](https://github.com/gopxl/glfh/tree/master/examples/demo).
+The following are parts of the demo program, which can be found in the [examples](https://github.com/gopxl/glhf/tree/master/examples/demo).
 
 ```go
 // ... GLFW window creation and stuff ...

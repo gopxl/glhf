@@ -1,4 +1,4 @@
-module github.com/gopxl/glfh
+module github.com/gopxl/glhf
 
 go 1.21
 
