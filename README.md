@@ -188,4 +188,4 @@ No. You have to use another library for windowing, e.g.
 
 ### Why no tests?
 
-If you find a way to automatically test OpenGL, I may add tests.
+If you find a way to automatically test OpenGL, please let us know!.
