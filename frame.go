@@ -3,8 +3,8 @@ package glhf
 import (
 	"runtime"
 
-	"github.com/gopxl/mainthread"
 	"github.com/go-gl/gl/v3.3-core/gl"
+	"github.com/gopxl/mainthread/v2"
 )
 
 // Frame is a fixed resolution texture that you can draw on.
