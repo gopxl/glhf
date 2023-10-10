@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/gopxl/mainthread"
 	"github.com/go-gl/gl/v3.3-core/gl"
+	"github.com/gopxl/mainthread/v2"
 	"github.com/pkg/errors"
 )
 

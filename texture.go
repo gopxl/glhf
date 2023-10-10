@@ -3,9 +3,9 @@ package glhf
 import (
 	"runtime"
 
-	"github.com/gopxl/mainthread"
 	"github.com/go-gl/gl/v3.3-core/gl"
 	"github.com/go-gl/mathgl/mgl32"
+	"github.com/gopxl/mainthread/v2"
 )
 
 // Texture is an OpenGL texture.
