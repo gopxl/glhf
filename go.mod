@@ -10,4 +10,4 @@ require (
 	github.com/pkg/errors v0.9.1
 )
 
-require golang.org/x/image v0.13.0 // indirect
+require golang.org/x/image v0.18.0 // indirect
