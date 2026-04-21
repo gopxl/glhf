@@ -166,6 +166,27 @@ for !shouldQuit {
 It uses OpenGL 3.3 and uses
 [`github.com/go-gl/gl/v3.3-core/gl`](https://github.com/go-gl/gl/tree/master/v3.3-core/gl).
 
+### Does GLHF work in a browser (WebAssembly)?
+
+Yes. Under `GOOS=js GOARCH=wasm` GLHF dispatches to a WebGL2 rendering context
+via `syscall/js` instead of go-gl. The exported API is the same, with one extra
+step: before calling `glhf.Init` (or any `New*` / `Make*` constructor), you
+must hand GLHF the `WebGL2RenderingContext` you created from your HTML canvas:
+
+```go
+//go:build js && wasm
+
+gl := jsCanvas.Call("getContext", "webgl2")
+glhf.SetContext(gl)
+glhf.Init()
+```
+
+GLSL 330 core shader sources are transparently adapted to GLSL ES 3.00 (the
+only version WebGL2 accepts). A few desktop-OpenGL concepts don't exist in
+WebGL2 and are stubbed or substituted — notably `CLAMP_TO_BORDER` falls back to
+`CLAMP_TO_EDGE`, and `glGetTexImage` is emulated through an off-screen
+framebuffer + `readPixels`.
+
 ### Why do I have to use `github.com/gopxl/mainthread` package with GLHF?
 
 First of all, OpenGL has to be done from one thread and many operating systems require, that the one

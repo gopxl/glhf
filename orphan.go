@@ -1,3 +1,5 @@
+//go:build !js
+
 package glhf
 
 import "github.com/go-gl/gl/v3.3-core/gl"
@@ -43,9 +45,39 @@ const (
 	DstAlpha         = BlendFactor(gl.DST_ALPHA)
 	OneMinusSrcAlpha = BlendFactor(gl.ONE_MINUS_SRC_ALPHA)
 	OneMinusDstAlpha = BlendFactor(gl.ONE_MINUS_DST_ALPHA)
+	SrcColor         = BlendFactor(gl.SRC_COLOR)
+	DstColor         = BlendFactor(gl.DST_COLOR)
+	OneMinusSrcColor = BlendFactor(gl.ONE_MINUS_SRC_COLOR)
+	OneMinusDstColor = BlendFactor(gl.ONE_MINUS_DST_COLOR)
 )
 
 // BlendFunc sets the source and destination blend factor.
 func BlendFunc(src, dst BlendFactor) {
 	gl.BlendFunc(uint32(src), uint32(dst))
+}
+
+// BlendFuncSeparate sets separate blend factors for RGB and alpha channels.
+func BlendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha BlendFactor) {
+	gl.BlendFuncSeparate(uint32(srcRGB), uint32(dstRGB), uint32(srcAlpha), uint32(dstAlpha))
+}
+
+// BlendEquationMode identifies a blend equation.
+type BlendEquationMode int
+
+// Supported blend equations.
+const (
+	FuncAdd             = BlendEquationMode(gl.FUNC_ADD)
+	FuncSubtract        = BlendEquationMode(gl.FUNC_SUBTRACT)
+	FuncReverseSubtract = BlendEquationMode(gl.FUNC_REVERSE_SUBTRACT)
+)
+
+// BlendEquation sets the active blend equation.
+func BlendEquation(mode BlendEquationMode) {
+	gl.BlendEquation(uint32(mode))
+}
+
+// ActiveTexture selects the active texture unit (0-based index). Unit N
+// corresponds to GL_TEXTURE0 + N.
+func ActiveTexture(unit int) {
+	gl.ActiveTexture(uint32(gl.TEXTURE0 + int32(unit)))
 }
